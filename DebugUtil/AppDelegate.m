@@ -19,12 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
 	[DebugLogView sharedView];
-	[UIAlertView showWithTitle:@"Hi" message:@"show the value?" onDismiss:
-	 ^(UIAlertView *alertView, NSInteger buttonIndex) {
-		 if(buttonIndex != alertView.cancelButtonIndex){
-			 
-		 }
-	 } cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
 	return YES;
 }
 
