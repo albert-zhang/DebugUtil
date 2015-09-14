@@ -22,7 +22,7 @@ pod "AZDebugUtil"
 
 ## Author
 
-Yang Zhang, albert.zhang@jdycar.cn
+Albert Zhang, albertzhang.pro@gmail.com
 
 ## License
 
