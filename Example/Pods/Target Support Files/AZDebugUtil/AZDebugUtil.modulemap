@@ -1,0 +1,6 @@
+framework module AZDebugUtil {
+  umbrella header "AZDebugUtil-umbrella.h"
+
+  export *
+  module * { export * }
+}

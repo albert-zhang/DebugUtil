@@ -1,0 +1,14 @@
+PODS:
+  - AZDebugUtil (0.1.0)
+
+DEPENDENCIES:
+  - AZDebugUtil (from `../`)
+
+EXTERNAL SOURCES:
+  AZDebugUtil:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AZDebugUtil: f2ee7c2940c8fda4dca26d673763132f02357e17
+
+COCOAPODS: 0.38.2
