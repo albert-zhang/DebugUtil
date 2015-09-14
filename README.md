@@ -1,17 +1,11 @@
 # AZDebugUtil
 
-[![CI Status](http://img.shields.io/travis/Yang Zhang/AZDebugUtil.svg?style=flat)](https://travis-ci.org/Yang Zhang/AZDebugUtil)
-[![Version](https://img.shields.io/cocoapods/v/AZDebugUtil.svg?style=flat)](http://cocoapods.org/pods/AZDebugUtil)
-[![License](https://img.shields.io/cocoapods/l/AZDebugUtil.svg?style=flat)](http://cocoapods.org/pods/AZDebugUtil)
-[![Platform](https://img.shields.io/cocoapods/p/AZDebugUtil.svg?style=flat)](http://cocoapods.org/pods/AZDebugUtil)
+
+Debug log to console/UI/File utilities for iOS development. With the NSLog's alternatives, you can easily manage the log statements by the preprocessors. And you can easily save log to file.
 
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
 
 AZDebugUtil is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -20,24 +14,9 @@ it, simply add the following line to your Podfile:
 pod "AZDebugUtil"
 ```
 
-## Author
-
-Albert Zhang, albertzhang.pro@gmail.com
-
-## License
-
-AZDebugUtil is available under the MIT license. See the LICENSE file for more info.
-
-
-# DebugUtil
-
-Debug log to console/UI/File utilities for iOS development. With the NSLog's alternatives, you can easily manage the log statements by the preprocessors. And you can easily save log to file.
-
-## Usage
-
-- Drop files in `src` to your project's source folder
 - Add the `#import "Debug.h"` to your prefix header file. If it is not exist you could create one, then update the setting in `Build Settings` > `Apple LLVM - Language` > `Prefix Header`
-- In `application:didFinishLaunchingWithOptions:` in `UIApplicationDelegate`, call `[DebugLogView sharedView]` to init the log UI
+- Copy the precompile defines to the prefix header file from `Debug.h`, and uncomment them as your need
+- In `application:didFinishLaunchingWithOptions:` in `UIApplicationDelegate`, call `[DebugLogView sharedView]` to init the log UI if you need to see the log on UI
 - Then you can use the `DebugLog`, `DebugLogError`, `FileLogger`, ...
 
 ## Example
