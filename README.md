@@ -42,20 +42,20 @@ Debug log to console/UI/File utilities for iOS development. With the NSLog's alt
 
 ## Example
 
-DebugLog(@"we got here: %d", theId);
-DebugLogWarning(@"the name is nil for people: %@", people.uid);
-DebugLogError(@"should never get here");
-
-[FileLogger log:@"we got %d peoples here", peoples.count];
-
-[DebugTip show:@"Hello!"];
-
-[UIAlertView showWithTitle:@"Hi" message:@"show the value?" onDismiss:
-^(UIAlertView *alertView, NSInteger buttonIndex) {
-if(buttonIndex != alertView.cancelButtonIndex){
-[self showDebugValue];
-}
-} cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+	DebugLog(@"we got here: %d", theId);
+	DebugLogWarning(@"the name is nil for people: %@", people.uid);
+	DebugLogError(@"should never get here");
+	
+	[FileLogger log:@"we got %d peoples here", peoples.count];
+	
+	[DebugTip show:@"Hello!"];
+	
+	[UIAlertView showWithTitle:@"Hi" message:@"show the value?" onDismiss:
+	    ^(UIAlertView *alertView, NSInteger buttonIndex) {
+	        if(buttonIndex != alertView.cancelButtonIndex){
+	            [self showDebugValue];
+	        }
+	    } cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
 
 ## Sepcial Preprocessors in Debug.h
 
