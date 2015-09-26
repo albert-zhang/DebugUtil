@@ -66,4 +66,15 @@ static NSMutableSet *resultDelegates = nil;
 + (UIAlertView *)showWithMessage:(NSString *)message{
     return [self showWithTitle:@"Alert" message:message onDismiss:NULL cancelButtonTitle:nil otherButtonTitles:nil];
 }
+
+
++ (UIAlertView *)showWithFormat:(NSString *)str, ...{
+    NSString *msg = nil;
+    va_list args;
+    va_start(args, str);
+    msg = [[NSString alloc] initWithFormat:str arguments:args];
+    va_end(args);
+    return [self showWithMessage:msg];
+}
+
 @end

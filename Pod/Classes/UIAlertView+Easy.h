@@ -14,6 +14,7 @@ typedef void (^UIAlertViewResultHandler)(UIAlertView *alertView, NSInteger butto
 @interface UIAlertView (Easy)
 
 + (UIAlertView *)showWithMessage:(NSString *)message;
++ (UIAlertView *)showWithFormat:(NSString *)str, ...;
 
 + (UIAlertView *)showWithTitle:(NSString *)title message:(NSString *)message;
 
