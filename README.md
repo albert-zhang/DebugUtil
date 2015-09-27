@@ -5,15 +5,6 @@ Debug log to console/UI/File utilities for iOS development. With the NSLog's alt
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-AZDebugUtil is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "AZDebugUtil"
-```
-
 - Add the `#import "Debug.h"` to your prefix header file. If it is not exist you could create one, then update the setting in `Build Settings` > `Apple LLVM - Language` > `Prefix Header`
 - Copy the precompile defines to the prefix header file from `Debug.h`, and uncomment them as your need
 - In `application:didFinishLaunchingWithOptions:` in `UIApplicationDelegate`, call `[DebugLogView sharedView]` to init the log UI if you need to see the log on UI
