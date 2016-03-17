@@ -19,6 +19,9 @@
 static const int DebugTipSeqMax = 5;
 static int debugTipSeq = 0; // [0 ~ DebugTipSeqMax]
 
+@interface DebugTip ()
+@end
+
 @implementation DebugTip
 
 + (void)show:(NSString *)info, ...{
@@ -105,11 +108,13 @@ static int debugTipSeq = 0; // [0 ~ DebugTipSeqMax]
         
     }];
 
-    durTmr = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(onDurTimer) userInfo:nil repeats:NO];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismiss];
+    });
 }
 
 
-- (void)onDurTimer{
+- (void)dismiss{
     [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
         self.alpha = 0;
     } completion:^(BOOL finished) {

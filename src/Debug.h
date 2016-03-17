@@ -14,18 +14,19 @@
 #import "DebugTip.h"
 #import "UIAlertView+Easy.h"
 
-#pragma mark -
+#pragma mark - =================================================================
 
+/**
+ Preprocessor Macros to add to project settings':
+ - DEBUG_LOG_ENABLED      Total switch of the DebugLog function.
+ - DEBUG_LOG_TO_CONSOLE   Debug log to console.
+ - DEBUG_LOG_TO_UI        Debug log to UI (DebugLogView).
+ - DEBUG_LOG_EW_TO_FILE   Auto save error and warning to log file.
+ */
 
-// comment the lines below to disable corresponding functionalities
-
-#define DEBUG_LOG_ENABLED       1   // comment this to disable debug log
+#pragma mark - =================================================================
 
 #define DEBUG_LOG_LEVEL 0 // 0: verbose, 1: warning, 2: error
-
-#define DEBUG_LOG_TO_CONSOLE    1   // comment this to disable debug log to console
-#define DEBUG_LOG_TO_UI         1   // comment this to disable debug log to UI (DebugLogView)
-#define DEBUG_LOG_EW_TO_FILE    1   // comment this to disable auto save error and warning to log file
 
 
 #pragma mark - =================================================================

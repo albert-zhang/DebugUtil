@@ -11,7 +11,6 @@
 @interface DebugTip : UIView
 {
     UILabel *tipLabel;
-    NSTimer *durTmr;
 }
 
 + (void)show:(NSString *)info, ...;

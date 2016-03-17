@@ -5,8 +5,11 @@ Debug log to console/UI/File utilities for iOS development. With the NSLog's alt
 
 ## Usage
 
-- Add the `#import "Debug.h"` to your prefix header file. If it is not exist you could create one, then update the setting in `Build Settings` > `Apple LLVM - Language` > `Prefix Header`
-- Copy the precompile defines to the prefix header file from `Debug.h`, and uncomment them as your need
+- Add the following macros into your `Build Settings -> Apple LLVM Preprocessing -> Preprocessor Macros -> Debug`, of course you don't have to add them all:
+    - DEBUG_LOG_ENABLED
+    - DEBUG_LOG_TO_CONSOLE
+    - DEBUG_LOG_TO_UI
+    - DEBUG_LOG_EW_TO_FILE
 - In `application:didFinishLaunchingWithOptions:` in `UIApplicationDelegate`, call `[DebugLogView sharedView]` to init the log UI if you need to see the log on UI
 - Then you can use the `DebugLog`, `DebugLogError`, `FileLogger`, ...
 
